@@ -50,8 +50,6 @@ function Dog (obj) {
         }
 }
 
-
-
 function Human(obj) {
     this.pet = function(dog) {
         dog.status = "happy"
@@ -65,44 +63,6 @@ function Human(obj) {
         this.cool = false
     }
 }
-
-
-
-
-
-// function Dog() {
-
-// }
-
-// Dog.prototype = {
-//     status: function() {
-//         status = "normal"
-//     }
-// }
-
-
-// function Dog(status) {
-//     return {
-//       toBe: function(status) {
-//         if (Dog.status === status) {
-//           console.log('\n     %cPASSED', 'color:green;', 'Expected', status, 'to be', Dog.status );
-//           return true;
-//         } else {
-//           console.log('\n     %cFAILED', 'color:red;', 'Expected', target, 'to be', expectation );
-//           return false;
-//         }
-//       }
-//     }
-//   }
-
-// function Human() {
-
-// }
-
-// Human.prototype = {
-
-// }
-  
   
   //        __
   //   ____/ /___  ____ ______
