@@ -35,8 +35,41 @@ function it(description, contents){
   // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
   //
   // Only add code to *THIS* section!
-  
-function Dog (obj) {
+
+// TRADITIONAL WAY - WORKS
+
+// function Dog (obj) {
+//     this.status = "normal"
+//     if (obj) {
+//         if (obj.hasOwnProperty("color")) {
+//             this.color = obj.color
+//         }
+//     }
+//     if (obj && obj.hasOwnProperty("hungry")) {
+//             this.hungry = obj.hungry
+//         } else {
+//             this.hungry = true
+//         }
+// }
+
+// function Human(obj) {
+//     this.pet = function(dog) {
+//         dog.status = "happy"
+//     }
+//     this.feed = function(dog) {
+//         dog.hungry = false
+//     }
+//     if (obj && obj.hasOwnProperty('cool')) {
+//         this.cool = obj.cool
+//     } else {
+//         this.cool = false
+//     }
+// }
+
+// -----------------------------------------------
+// CLASS 
+class Dog {
+    constructor(obj) {
     this.status = "normal"
     if (obj) {
         if (obj.hasOwnProperty("color")) {
@@ -47,22 +80,27 @@ function Dog (obj) {
             this.hungry = obj.hungry
         } else {
             this.hungry = true
-        }
+        }   
+    }
 }
 
-function Human(obj) {
-    this.pet = function(dog) {
-        dog.status = "happy"
-    }
-    this.feed = function(dog) {
-        dog.hungry = false
-    }
-    if (obj && obj.hasOwnProperty('cool')) {
-        this.cool = obj.cool
-    } else {
-        this.cool = false
+class Human {
+    constructor(obj) {
+        this.pet = function(dog) {
+            dog.status = "happy"
+        }
+        this.feed = function(dog) {
+            dog.hungry = false
+        }
+        if (obj && obj.hasOwnProperty('cool')) {
+            this.cool = obj.cool
+        } else {
+            this.cool = false
+        }
     }
 }
+
+// -----------------------------------------------
   
   //        __
   //   ____/ /___  ____ ______
